@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FizzBuzz Game</title>
+    <title>FizzBuzz Game Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
-        <div class="WelcomeText">
-            <h1>Welcome, &nbsp;<span id="username"></span></h1>
-        </div>
-        <div class="container">
-            <p>Your current FizzBuzz score is: &nbsp;<span class="box">0</span></p>
-        </div>
-        <button class="button_">Click to increment</button>
+        <form name="boxForm" class="alignInputs" onsubmit="returnvalidateForm()" action="game.html">
+            <input type="text" name="username" id="username" placeholder="Enter your username" required>
+            <input type="submit" value="Submit">
+        </form>
     </main>
     <script src="main.js"></script>
 </body>
