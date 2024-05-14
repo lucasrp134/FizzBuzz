@@ -22,3 +22,5 @@ function validateForm() {
       return false;
     }
   }
+
+button.addEventListener('click', addNumber);
