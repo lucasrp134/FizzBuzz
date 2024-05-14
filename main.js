@@ -14,3 +14,11 @@ function addNumber() {
         box.textContent = number;
     }
 }
+
+function validateForm() {
+    let x = document.forms["boxForm"]["usernameBox"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
