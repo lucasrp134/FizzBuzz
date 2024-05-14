@@ -33,3 +33,7 @@ main {
     border-radius: 5px;
     border-color: rgb(186, 213, 237);
 }
+
+button:hover {
+    background-color: rgb(12, 130, 108);
+}
