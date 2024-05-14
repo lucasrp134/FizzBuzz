@@ -49,3 +49,9 @@ button:hover {
     flex-direction: row;
     align-items: center;
 }
+
+.welcomeText h1 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
