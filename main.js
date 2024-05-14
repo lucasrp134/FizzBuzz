@@ -24,3 +24,12 @@ function validateForm() {
   }
 
 button.addEventListener('click', addNumber);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    const usernameElement = document.getElementById('username');
+    if (usernameElement) {
+        usernameElement.textContent = username;
+    }
+});
