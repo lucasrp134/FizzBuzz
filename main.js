@@ -27,6 +27,30 @@ function fetchScore(username) {
         });
 }
 
+// Function to update the score on the API server
+function updateScore(username, score) {
+    const url = `http://basic-web.dev.avc.web.usf.edu/${username}`;
+    const data = { score: score };
+
+    // Send POST request to update score
+    return fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to update score');
+        }
+        console.log('Score updated successfully');
+    })
+    .catch(error => {
+        console.error('Error updating score:', error);
+    });
+}
+
 //function to update score and username display
 function updateScoreDisplay() {
     box.textContent = score;
