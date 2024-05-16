@@ -28,4 +28,5 @@ function addNumber() {
     updateScore(username, newScore);
 }
 
+// Add event listener for button click using addNumber function
 button.addEventListener('click', addNumber);
