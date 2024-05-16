@@ -27,6 +27,12 @@ function fetchScore(username) {
         });
 }
 
+//function to update score and username display
+function updateScoreDisplay() {
+    box.textContent = score;
+    user.textContent = username
+}
+
 //definition of addNumber function to increment score
 function addNumber() {
     newScore += 1;
