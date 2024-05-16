@@ -6,6 +6,27 @@ let score = 0; // Initialize score variable
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('username');
 
+// Function to fetch the current score from the API
+function fetchScore(username) {
+    const url = `http://basic-web.dev.avc.web.usf.edu/${username}`;
+
+    return fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch score');
+            }
+            return response.json();
+        })
+        .then(data => {
+            score = data.score; // Update score variable with the fetched score
+            updateScoreDisplay(); // Update score display on the webpage
+            newScore = score; // Use the retrieved score as the new initial score
+        })
+        .catch(error => {
+            console.error('Error fetching score:', error);
+        });
+}
+
 //definition of addNumber function to increment score
 function addNumber() {
     newScore += 1;
