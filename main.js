@@ -1,6 +1,8 @@
 const box = document.querySelector('.box');
+const user = document.querySelector('.username');
 const button = document.querySelector('.button_');
 let number = 0;
+
 
 function addNumber() {
     number += 1;
