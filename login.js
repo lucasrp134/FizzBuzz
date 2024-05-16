@@ -61,7 +61,20 @@ function handleFormSubmission(event) {
             const score = response.data.score;
             window.location.href = `index.html?username=${encodeURIComponent(username)}&score=${encodeURIComponent(score)}`;
         } else {
-            
+            // User does not exist, create a new user with a starting score of 0
+            post(`http://basic-web.dev.avc.web.usf.edu/${username}`, { score: 0 })
+                .then(function(response) {
+                    if (response.status === 201) {
+                        // User created successfully, redirect to main page
+                        window.location.href = `index.html?username=${encodeURIComponent(username)}&score=0`;
+                    } else {
+                        // Handle error
+                        console.error(response.data);
+                    }
+                })
+                .catch(function(error) {
+                    console.error("Error creating new user:", error);
+                });
         }
     })
     .catch(function(error) {
