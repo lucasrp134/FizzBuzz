@@ -9,9 +9,11 @@
 
 <body>
     <main>
-        <form name="boxForm" class="alignInputs" onsubmit="returnvalidateForm()" action="game.html">
+        <!-- Login form -->
+        <form name="boxForm" class="alignInputs"  method="post" action="index.html" >
             <input type="text" name="username" id="username" placeholder="Enter your username" required>
-            <input type="submit" value="Submit">
+            <!-- Submit button to send the form -->
+            <input type="submit" name="Submit" value="Submit" onclick= "validateForm();"  />
         </form>
     </main>
     <script src="main.js"></script>
