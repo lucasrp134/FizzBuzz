@@ -1,7 +1,7 @@
 const box = document.querySelector('.box');
 const user = document.querySelector('.username');
 const button = document.querySelector('.button_');
-let number = 0;
+let newScore = 0;
 
 
 function addNumber() {
