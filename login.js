@@ -24,3 +24,20 @@ function post(url, data) {
         http.send(data);
     });
 }
+
+// Define the login function
+function login() {
+    var username = document.getElementById('username').value;
+
+    if (username === username) {
+        alert('Success');
+        let x = document.forms["boxForm"]["usernameBox"].value;
+        if (x === "") {
+            alert("Name must be filled out");
+            return false;
+        }
+        location.href = "index.html";
+    } else {
+        alert('User incorrect');
+    }
+}
