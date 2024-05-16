@@ -38,6 +38,16 @@ button:hover {
     background-color: rgb(12, 130, 108);
 }
 
+#confirmLink {
+    margin-top: 10px;
+}
+
+.alignInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .welcomeText {
     display: flex;
     flex-direction: row;
