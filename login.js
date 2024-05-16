@@ -52,3 +52,19 @@ function handleFormSubmission(event) {
         alert("Name must be filled out");
         return false;
     }
+    // Call the get function to check if the user exists
+    get(`http://basic-web.dev.avc.web.usf.edu/${username}`)
+    .then(function(response) {
+        if (response.status === 200) {
+            // User exists, redirect to main page
+            const username = response.data.id;
+            const score = response.data.score;
+            window.location.href = `index.html?username=${encodeURIComponent(username)}&score=${encodeURIComponent(score)}`;
+        } else {
+            
+        }
+    })
+    .catch(function(error) {
+        console.error("Error:", error);
+    });
+}
