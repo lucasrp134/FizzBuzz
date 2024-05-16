@@ -65,3 +65,7 @@ button:hover {
     font-size: 25px;
     text-align: center;
 }
+
+* {
+    box-sizing: border-box;
+}
