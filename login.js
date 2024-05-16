@@ -81,3 +81,6 @@ function handleFormSubmission(event) {
         console.error("Error:", error);
     });
 }
+
+// Add event listener for form submission
+document.forms["boxForm"].addEventListener('submit', handleFormSubmission);
