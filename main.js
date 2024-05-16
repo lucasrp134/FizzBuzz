@@ -70,6 +70,7 @@ function addNumber() {
     } else {
         box.textContent = newScore;
     }
+
     // Update URL with the new score
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set('score', newScore);
