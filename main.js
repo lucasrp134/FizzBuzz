@@ -28,5 +28,11 @@ function addNumber() {
     updateScore(username, newScore);
 }
 
+// Fetch current score from the API when the page loads
+fetchScore(username)
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
 // Add event listener for button click using addNumber function
 button.addEventListener('click', addNumber);
