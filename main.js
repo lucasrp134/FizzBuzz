@@ -19,6 +19,13 @@ function addNumber() {
     } else {
         box.textContent = newScore;
     }
+    // Update URL with the new score
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('score', newScore);
+    history.replaceState(null, null, `?${urlParams.toString()}`);
+
+    // Update score on the API server
+    updateScore(username, newScore);
 }
 
 button.addEventListener('click', addNumber);
