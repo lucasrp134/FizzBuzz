@@ -41,3 +41,14 @@ function login() {
         alert('User incorrect');
     }
 }
+
+// Function to handle form submission
+function handleFormSubmission(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    //retrieve username from page
+    const username = document.getElementById('username').value;
+    if (username.trim() === '') {
+        alert("Name must be filled out");
+        return false;
+    }
