@@ -6,16 +6,18 @@ let score = 0; // Initialize score variable
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('username');
 
+//definition of addNumber function to increment score
 function addNumber() {
-    number += 1;
-    if (number % 3 === 0 && number % 5 === 0) {
+    newScore += 1;
+
+    if (newScore % 3 === 0 && newScore % 5 === 0) {
         box.textContent = 'FizzBuzz';
-    } else if (number % 3 === 0) {
+    } else if (newScore % 3 === 0) {
         box.textContent = 'Fizz';
-    } else if (number % 5 === 0) {
+    } else if (newScore % 5 === 0) {
         box.textContent = 'Buzz';
     } else {
-        box.textContent = number;
+        box.textContent = newScore;
     }
 }
 
