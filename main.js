@@ -2,6 +2,7 @@ const box = document.querySelector('.box');
 const user = document.querySelector('.username');
 const button = document.querySelector('.button_');
 let newScore = 0;
+let score = 0; // Initialize score variable
 
 
 function addNumber() {
