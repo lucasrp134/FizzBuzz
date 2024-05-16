@@ -3,7 +3,8 @@ const user = document.querySelector('.username');
 const button = document.querySelector('.button_');
 let newScore = 0;
 let score = 0; // Initialize score variable
-
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
 
 function addNumber() {
     number += 1;
